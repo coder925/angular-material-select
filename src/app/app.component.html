@@ -1,0 +1,30 @@
+<p>Your selection: {{selected}}</p>
+<p>Type of selection: {{getSelectedType()}}</p>
+<div>
+  <mat-form-field class="select-icon">
+    <mat-select [(value)]="selected">
+
+      <mat-select-trigger>
+        <mat-icon *ngIf="selected==0">lock</mat-icon>
+        <mat-icon *ngIf="selected==1">pets</mat-icon>
+        <mat-icon *ngIf="selected==2">shop</mat-icon>
+        <mat-icon *ngIf="selected==3">save</mat-icon>
+      </mat-select-trigger>
+
+      <mat-option [value]="0">
+        <mat-icon>lock</mat-icon> By letter
+      </mat-option>
+      <mat-option [value]="1">
+        <mat-icon>pets</mat-icon> By e-mail to contact
+      </mat-option>
+      <mat-option [value]="2">
+        <mat-icon>shop</mat-icon> By e-mail to company
+      </mat-option>
+      <mat-option [value]="3">
+        <mat-icon>save</mat-icon> By e-invoice
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+
